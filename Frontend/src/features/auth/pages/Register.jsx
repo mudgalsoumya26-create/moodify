@@ -12,7 +12,7 @@ const Register = () => {
     async function handleSubmit(e){
         e.preventDefault();
         await handleRegister({username,email,password})
-        nav('/')
+        nav('/dashboard')
     }
 
 
@@ -31,7 +31,7 @@ const Register = () => {
 
                 <p className="login_text">
                     Already have an account?
-                    <a href="/login">Login</a>
+                    <a href="/">Login</a>
                 </p>
             </section>
         </main>
