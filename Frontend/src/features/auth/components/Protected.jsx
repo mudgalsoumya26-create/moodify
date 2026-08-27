@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router'
 import { useAuth } from '../hooks/useAuth'
 const Protected = ({children}) => {
     const {user,loading}=useAuth()
-    const nav=useNavigate();
+    const Navigate= useNavigate();
     if(loading){
        return <h1>Loading...</h1>
     }
