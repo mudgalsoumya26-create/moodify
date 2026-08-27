@@ -5,11 +5,11 @@ import Protected from './features/auth/components/Protected.jsx'
 import Home from './features/Home/pages/Home.jsx'
 const router=createBrowserRouter([
     {
-        path:'/',
+        path:'/dashboard',
         element:<Protected><Home/></Protected>
     },
     {
-        path:'/login',
+        path:'/',
         element:<Login/>
     },
     {
