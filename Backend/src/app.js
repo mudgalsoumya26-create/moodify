@@ -7,7 +7,7 @@ const app=express();
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin:'https://sonora-soumyas26.vercel.app',
+    origin:'https://sonora-soumyas26.vercel.app',//exact origin, NOT *,
     credentials:true
 }))
 app.use('/api/auth',authRouter)
