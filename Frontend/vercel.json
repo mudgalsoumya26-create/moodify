@@ -1,5 +1,11 @@
 {
     "rewrites":[
-        {"source":"/(.*)","destination":"/index.html"}
+        {"source":"/api/:path*",
+        "destination":"https://sonora-1-0.onrender.com/api/:path*"
+    },
+    {
+        "source":"/(.*)",
+        "destination":"/index.html"
+    }
     ]
 }

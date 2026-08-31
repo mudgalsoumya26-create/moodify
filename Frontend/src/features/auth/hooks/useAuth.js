@@ -8,26 +8,36 @@ export function useAuth(){
 
     async function handleRegister({username,email,password}){
         setloading(true);
-        const data=await register({username,email,password})
-        setuser(data.user)
-        setloading(false)
+       try{ const data=await register({username,email,password})
+        setuser(data.user)}
+        catch{
+             setuser(null);
+        }
+        finally{setloading(false)}
     }
 
      async function handleLogin({username,email,password}){
         setloading(true);
-        const data=await login({username,email,password})
-        setuser(data.user)
-        setloading(false)
+        try{const data=await login({username,email,password})
+        setuser(data.user)}
+        catch{
+             setuser(null);
+        }
+
+        finally{setloading(false)}
     }
      async function handleGetMe(){
         setloading(true);
-        const data=await getMe()
+        try{ const data=await getMe()
         setuser(data.user)
-        setloading(false)
+      }catch{
+        setuser(null);
+      }
+       finally{ setloading(false)}
     }
      async function handleLogout(){
         setloading(true);
-        const data=await register()
+        const data=await logOut()
         setuser(null)
         setloading(false)
     }
