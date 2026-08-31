@@ -118,17 +118,13 @@ const Player = ({
           ↶<small>5</small>
         </button>
 
-        <button className="control-button" onClick={onPrevious}>
-          ⏮
-        </button>
+        
 
         <button className="play-button" onClick={togglePlay}>
           {isPlaying ? "Ⅱ" : "▶"}
         </button>
 
-        <button className="control-button" onClick={onNext}>
-          ⏭
-        </button>
+      
 
         <button className="control-button" onClick={() => skip(5)}>
           ↷<small>5</small>
