@@ -24,7 +24,13 @@ const Register = () => {
                 <form onSubmit={handleSubmit}>
                    <FormGroup value={username} onChange={(e)=>setusername(e.target.value)} label="Username" placeholder="Enter your username" />
                     <FormGroup value={email} onChange={(e)=>setemail(e.target.value)} label="Email" placeholder="you@example.com" />
-                    <FormGroup value={password} onChange={(e)=>setpassword(e.target.value)} label="Password" placeholder="Enter your password" />
+                    <FormGroup
+                        value={password}
+                        onChange={(e)=>setpassword(e.target.value)}
+                        label="Password"
+                        placeholder="Enter your password"
+                        type="password"
+                    />
 
                     <button type="submit">Register</button>
                 </form>

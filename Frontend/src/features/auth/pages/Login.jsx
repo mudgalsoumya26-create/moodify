@@ -22,7 +22,13 @@ const Login = () => {
 
                 <form onSubmit={handleSubmit}>
                     <FormGroup value={email} onChange={(e)=>setemail(e.target.value)} label="Email" placeholder="you@example.com" />
-                    <FormGroup value={password} onChange={(e)=>setpassword(e.target.value)} label="Password" placeholder="Enter your password" />
+                    <FormGroup
+                        value={password}
+                        onChange={(e)=>setpassword(e.target.value)}
+                        label="Password"
+                        placeholder="Enter your password"
+                        type="password"
+                    />
 
                     <button type="submit">Login</button>
                 </form>
